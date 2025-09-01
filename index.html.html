@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courier Service</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #6dd5ed, #2193b0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 350px;
+      width: 100%;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: #2193b0;
+      box-shadow: 0 0 5px rgba(33,147,176,0.5);
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2193b0;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #17627a;
+    }
+
+    .footer {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Courier Service</h1>
+    <p>Enter your courier details</p>
+
+    <input type="number" id="weight" placeholder="Enter weight (kg)" />
+    <input type="number" id="height" placeholder="Enter height (cm)" />
+
+    <button onclick="redirectToVideo()">Submit</button>
+    <div class="footer">Powered by Smart Delivery™</div>
+  </div>
+
+  <script>
+    function redirectToVideo() {
+      const weight = document.getElementById('weight').value;
+      const height = document.getElementById('height').value;
+
+      if (weight && height) {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+      } else {
+        alert("Please fill in both weight and height!");
+      }
+    }
+  </script>
+</body>
+</html>
